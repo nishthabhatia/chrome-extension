@@ -17,12 +17,12 @@
  *
  * Write a method to convert a node's text, possibly according
  * to some replacement rules (for Part 2), and return it.
- * 
+ *
  * In Part 1:
  * You will replace every instance of the substring 'cal'
  * with the text 'butt'. For Part 1, you may assume that
  * the `settings` variable is null.
- * 
+ *
  * In Part 2:
  * You will use the map of replacement rules you built in parseSettings()
  * to do the text replacement. Thus, if the map contains an association
@@ -30,7 +30,7 @@
  * then any instance of the substring "force" should be replaced
  * by the string "horse" in the text. As always, you should still be
  * replacing "cal" with "butt"
- * 
+ *
  * Sample Usage:
  * (Part 1) modifyText('calhacks organizer', null)
  *             returns 'butthacks organizer'
@@ -45,30 +45,31 @@
  *                  replaced by butt
  */
 function modifyText(text, settings) {
-	// Currently, this method returns the unmodified text.
-	// You'll need to update this method to return the updated text.
-	return text;
+	var newText = text.replace("cal", "butt");
+	newText = text.replace("Cal", "Butt");
+	newText = text.replace("CAL", "BUTT");
+	return newText;
 }
 
 /**
  * YOUR CODE HERE (Part 2)
- * 
+ *
  * Parse a list of lines (replacement rules) of the form
  *   `from_text -> to_text`
  * into an object that maps strings to the strings they
  * are replaced by.
- * 
+ *
  * Sample Usage:
  * parseSettings([
  *   "cal -> butt",
  *   "then -> now"
  * ])
  * should return
- * { 
+ * {
  *    "cal": "butt",
  *    "then": "now"
  * }
- * 
+ *
  * @param (array of strings) lines
  *        A list of strings of the form `from_text -> to_text`
  * @return (map from strings to strings)
@@ -82,13 +83,13 @@ function parseSettings(lines) {
 
 /**
  * YOUR CODE HERE (Part 3)
- * 
+ *
  * Replace all images on a webpage with another
  * source image, according to some settings.
  *
  * Since this is a harder part of the hackpack,
  * we'll give you more flexibility on this method.
- * 
+ *
  * We pass the settings you create in part 2 into this
  * function. Use that collection of replacement rules
  * however you want, although be aware that you may have
@@ -100,7 +101,7 @@ function parseSettings(lines) {
  *
  * You are allowed (and encouraged) to build helper functions
  * for this task, corresponding to the 3 steps below.
- * 
+ *
  * @param (map) settings (possibly null)
  *        Collection of replacement rules as built in Part 2
  */
