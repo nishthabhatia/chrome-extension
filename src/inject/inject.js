@@ -46,8 +46,6 @@
  */
 function modifyText(text, settings) {
 	var newText = text.replace("cal", "butt");
-	newText = text.replace("Cal", "Butt");
-	newText = text.replace("CAL", "BUTT");
 	return newText;
 }
 
